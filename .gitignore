@@ -1,6 +1,5 @@
 # Deployment files (these are deployment-specific and don't affect core logic)
-packages.txt
-requirements.txt
+
 runtime.txt
 
 # Documentation files (these are for reference but not needed for functionality)
