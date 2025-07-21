@@ -1,4 +1,4 @@
-# 🧿 Diabetic Retinopathy Detection
+# Diabetic Retinopathy Detection
 
 Diabetic retinopathy is a complication of diabetes that can lead to vision loss if not detected early. 
 Our project uses a deep learning approach—specifically a **ResNet-18 convolutional neural network**—to make early detection easier and more accessible.
