@@ -27,25 +27,25 @@ This project is split into two main parts:
 - **What it does:** Lets you upload a retinal image and instantly get a prediction in your browser.
 - **Main libraries and tech used:**
   - `streamlit` (for the web interface)
-  - `torch` (PyTorch, for loading and running the trained ResNet-18 model)
+  - `torch` (PyTorch, for loading and running the trained EfficientNet model)
   - `albumentations` and `opencv-python (cv2)` (for image preprocessing)
   - `PIL` (Python Imaging Library) and `numpy` (for image handling and array operations)
-- **How it works:** Loads a trained ResNet-18 model, preprocesses your image, and shows the result in a clean UI.
+- **How it works:** Loads a trained EfficientNet model, preprocesses your image, and shows the result in a clean UI.
 
 ### 2. Training (Model Development)
 - **File:** `training/train_test.py`
-- **What it does:** Lets you train or retrain the deep learning model (ResNet-18) on your own dataset.
+- **What it does:** Lets you train or retrain the deep learning model (EfficientNet) on your own dataset.
 - **Main libraries and tech used:**
   - `torch` and `torchvision` (for model, training, and data loading)
   - `numpy` (for data handling)
   - `os`, `random` (for reproducibility and file management)
-- **How it works:** Trains a ResNet-18 model (with transfer learning) on your images, saves the model, and prints test accuracy.
+- **How it works:** Trains a EfficientNet model (with transfer learning) on your images, saves the model, and prints test accuracy.
 
 ---
 
 ## What does it do?
 - Upload a retinal image (JPG, JPEG, or PNG).
-- The app preprocesses the image and runs it through a trained **ResNet-18** model.
+- The app preprocesses the image and runs it through a trained **EfficientNet** model.
 - You’ll see a diagnosis: one of five levels of diabetic retinopathy (from No DR to Proliferative DR).
 
 ---
@@ -54,11 +54,11 @@ This project is split into two main parts:
 ```
 Diabetic-Retinopathy/
 ├── deploy/
-│   ├── app.py           # Streamlit web app (uses ResNet-18 for inference)
-│   ├── full_model.pth   # Trained ResNet-18 model for inference
+│   ├── app.py           # Streamlit web app (uses EfficientNet for inference)
+│   ├── full_model.pth   # Trained EfficientNet model for inference
 │   └── requirements.txt # Dependencies for deployment
 ├── training/
-│   ├── train_test.py    # Model training/testing (ResNet-18)
+│   ├── train_test.py    # Model training/testing (EfficientNet)
 │   ├── new_model.pth    # Output from training
 │   └── data/            # Training/test images
 ├── images/              # Sample images for testing
@@ -82,16 +82,16 @@ Diabetic-Retinopathy/
 - Open the web app (Streamlit).
 - Upload your eye image.
 - Click the **Analyze Image** button.
-- See your result instantly, powered by ResNet-18.
+- See your result instantly, powered by EfficientNet.
 
 ## For Developers
-- Retrain the model using the scripts in `training/` if you want to improve or adapt it. The training script uses PyTorch and torchvision to train a ResNet-18 model from scratch or with transfer learning.
+- Retrain the model using the scripts in `training/` if you want to improve or adapt it. The training script uses PyTorch and torchvision to train a EfficientNet model from scratch or with transfer learning.
 - The app will show an error if the model file is missing.
 
 ---
 
 ## Technologies & Libraries Used
-- **Deep Learning Model:** ResNet-18 (PyTorch, torchvision)
+- **Deep Learning Model:** EfficientNet (PyTorch, torchvision)
 - **Web App:** Streamlit
 - **Image Preprocessing:** albumentations, OpenCV (cv2), PIL, numpy
 - **Training Utilities:** torch, torchvision, numpy, os, random
